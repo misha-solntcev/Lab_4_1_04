@@ -29,6 +29,11 @@ namespace Lab_4_1_04
                     min = arr[i];                
             }
             Console.WriteLine($"min={min}");
+            
+            // Linq
+            var res = arr.Where((x, i) => i >= n && i <= k).Min();
+            Console.WriteLine($"res = {res}");
+
             Console.ReadKey();
         }
     }
